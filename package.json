@@ -1,0 +1,34 @@
+{
+  "name": "property-manegmant",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/sol4kira/Property-Management#readme",
+  "bugs": {
+    "url": "https://github.com/sol4kira/Property-Management/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sol4kira/Property-Management.git"
+  },
+  "license": "ISC",
+  "author": {
+      "name": "Kirubel-Solomon",
+      "url": "https://github.com/kira4sol"
+    },
+  "contributors": [
+    {
+      "name": "Barkot-Solomon",
+      "url": "https://github.com/Barkot-Sol"
+    },
+    {
+      "name": "Belail-Abebe",
+      "url": "https://github.com/Belaildotdev"
+    }
+  ],
+
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
