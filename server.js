@@ -1,8 +1,4 @@
 const port = process.env.PORT || 5000;
-import express from 'express';
-
-const fs = require('fs');
-const path = require('path');
 
 const TenatEmail = path.join(__dirname,'/Email/tenateEmail.json');
 const propertyOwnerEmail = path.join(__dirname,'/Email/propertyOwnerEmail.json');
@@ -11,12 +7,11 @@ const propertyOwnerData = path.join(__dirname,'/Data/propertyOwner.json');
 const propertyData = path.join(__dirname,'/Data/property.json');
 const tenateData = path.join(__dirname,'/Data/tenate.json');
 
-const SibApiV3Sdk = require('@getbrevo/brevo');
-const brevo = new SibApiV3Sdk.TransactionalEmailsApi();
-brevo.setApiKey(SibApiV3Sdk.TransactionalEmailsApiApiKeys.apiKey, process.env.BREVO_API_KEY);
 
+const fs = require('fs');
+const path = require('path');
+const express = require('express');
 const cors = require('cors');
-
 const app = express();
 app.use(express.json());
 app.use(cors());
