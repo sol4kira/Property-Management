@@ -2,13 +2,46 @@ const SibApiV3Sdk = require('@getbrevo/brevo');
 const brevo = new SibApiV3Sdk.TransactionalEmailsApi();
 brevo.setApiKey(SibApiV3Sdk.TransactionalEmailsApiApiKeys.apiKey, process.env.BREVO_API_KEY);
 
+function tenatApplicationEmail(application){
+    const {
+        tenantName,
+        tenantEmail,
+        propertyAddress
+        } = application;
+
+        const emailContent=`
+        <h2> Application Recieved</h2>
+        <p>Dear ${tenantName},</p>
+
+        <p> We have received the application you submitted for the property located at ${propertyAddress}.
+        We will look at the application and get back to you as soon as possible.</p>
+
+        <p> Thank you for choosing BBk Properties Management.</p>
+        <br>
+        `;
+
+        return brevo.sendTransacEmail({
+        sender: {
+            email: process.env.FROM_EMAIL,
+            name: 'BBK Property Management'
+        },
+        to: [
+            { email: tenantEmail, name: tenantName }
+        ],
+        subject: 'Tenant Application Recieved',
+        htmlContent: emailContent
+    });
+
+}
+
 function tenantApprovedEmail(application){
     const {propertyOwnerEmail,
         propertyOwner,
         tenantName,
         tenantEmail,
         tenantPhoneNumber,
-        propertyAddress} = application;
+        propertyAddress
+        } = application;
 
     const emailContent=`
     <h2>Application Approved</h2>
@@ -74,8 +107,31 @@ function tenantMaintenanceRequestEmail(maintenanceRequest){
     <p>Dear ${tenantName},</p>
 
     <p>We have received your maintenance request for the property located at ${propertyAddress}.</p>
-    <p>As per your request, provided 
-    `
+    <p>As per your request, provided below are the details of the maintenance issue:</p>
+    <p><strong>Request Details:</strong> ${requestDetails}</p>
+
+    <P> Our maintenance team will review your request and get back to you and schedule  a visit to address your issue as soon as possible.</p>
+
+    <p>Thank you for bringing this to our attention. We are committed to ensuring your living experience is comfortable and enjoyable.</p>
+
+    <p>Fill free to contact us if there is any concerns.</p>
+    <a href="mailto:${process.env.FROM_EMAIL}">Contact us.</a>
+    <br>
+    <p> Thank you for choosing BBk Properties Management.</p>
+    <br>
+    `;
+
+    return brevo.sendTransacEmail({
+        sender: {
+            email: process.env.FROM_EMAIL,
+            name: 'BBK Property Management'
+        },
+        to: [
+            { email: tenantEmail, name: tenantName }
+        ],
+        subject: 'Tenant Application Approved',
+        htmlContent: emailContent
+    });
 }
 
-module.exports = { tenantApprovedEmail };
+module.exports = { tenantApprovedEmail, tenantMaintenanceRequestEmail };
