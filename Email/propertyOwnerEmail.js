@@ -45,4 +45,43 @@ function propertyOwnerTenantApprovedEmail(application){
     });
 }
 
+function maintenanceRequestReceived(maintenanceRequest){
+    const {
+        tenantName,
+        propertyAddress,
+        requestDetails,
+        propertyOwner
+    } = maintenanceRequest;
+
+    const emailContent = `
+    <h2>Maintenance Request Recevied</h2>
+    <p>Dear ${propertyOwner},</p>
+
+    <p>We have received a  maintenance request from ${tenantName} for the property you owned located at ${propertyAddress}.</p>
+    <p>As per request, provided below are the details of the maintenance issue:</p>
+    <p><strong>Request Details:</strong> ${requestDetails}</p>
+
+    <P> Our maintenance team will review the request and get back to the tenant and schedule a visit to address the issue as soon as possible.</p>
+    <p> We want to ensure that all the tenants have a comfortable and enjoyable living experience.</p>
+
+    <p>Fill free to contact us if there is any concerns.</p>
+    <a href="mailto:${process.env.FROM_EMAIL}">Contact us.</a>
+    <br>
+    <p> Thank you for choosing BBk Properties Management.</p>
+    <br>
+    `;
+
+    return brevo.sendTransacEmail({
+        sender: {
+            email: process.env.FROM_EMAIL,
+            name: 'BBK Property Management'
+        },
+        to: [
+            { email: propertyOwnerEmail, name: propertyOwner }
+        ],
+        subject: 'Maintenance Request Received',
+        htmlContent: emailContent
+    });
+}
+
 module.export = {propertyOwnerTenantApprovedEmail};
