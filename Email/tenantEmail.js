@@ -2,7 +2,7 @@ const SibApiV3Sdk = require('@getbrevo/brevo');
 const brevo = new SibApiV3Sdk.TransactionalEmailsApi();
 brevo.setApiKey(SibApiV3Sdk.TransactionalEmailsApiApiKeys.apiKey, process.env.BREVO_API_KEY);
 
-function tenatApplicationEmail(application){
+function tenantApplicationEmail(application){
     const {
         tenantName,
         tenantEmail,
@@ -134,4 +134,4 @@ function tenantMaintenanceRequestEmail(maintenanceRequest){
     });
 }
 
-module.exports = { tenantApprovedEmail, tenantMaintenanceRequestEmail };
+module.exports = { tenantApplicationEmail, tenantApprovedEmail, tenantMaintenanceRequestEmail };

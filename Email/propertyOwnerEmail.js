@@ -84,4 +84,4 @@ function maintenanceRequestReceived(maintenanceRequest){
     });
 }
 
-module.export = {propertyOwnerTenantApprovedEmail};
+module.exports = {propertyOwnerTenantApprovedEmail,maintenanceRequestReceived};
