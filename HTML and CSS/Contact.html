@@ -7,6 +7,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="Fontawesome/css/all.min.css">
     <title>Santorini Property Management</title>
+    <link rel="icon" type="image/x-icon" href="Images/Logo.png">
 </head>
 <body>
     <header class="site-top">
@@ -18,6 +19,7 @@
                     <p>PROPERTY MANAGEMENT</p>
                 </div>
             </div>
+            <button class="hamburger" id="hamburger"><i class="fa-solid fa-bars"></i></button>
             <div class="location">
                 <p>Beach Cities Office</p>
                 <p><a href="https://www.google.com/maps/place/727+2nd+St+UNIT+206,+Hermosa+Beach,+CA+90254,+USA/@33.8567369,-118.3936291,17z/data=!3m1!4b1!4m5!3m4!1s0x80c2b49d355abf07:0x8f187a49f6aff04b!8m2!3d33.8567325!4d-118.3914404">727 2nd Street, Unit 206 Hermosa Beach, CA 90254</a></p>
@@ -31,6 +33,16 @@
         </div>
         <hr class="header-hr">
     </header>
+    <aside class="sidebar" id="sidebar">
+        <button class="close-sidebar" id="closeSidebar"><i class="fa-solid fa-xmark"></i></button>
+        <nav>
+            <a href="Home.html">HOME</a>
+            <a href="Property.html">PROPERTIES</a>
+            <a href="Tenants.html">TENANTS</a>
+            <a href="Owners.html">OWNERS</a>
+            <a href="Contact.html">CONTACT</a>
+        </nav>
+    </aside>
     <div class="links">
         <nav>
             <a href="Home.html">HOME</a>
@@ -40,6 +52,7 @@
             <a href="Contact.html">CONTACT</a>
         </nav>
     </div>
+    
     <section class="C-hero">
         <div class="cover-img">
             <img src="Images/Contact-bg.webp" alt="Contact-bg">
@@ -104,12 +117,6 @@
             </div>
             <form class="contact-form">
                 <h2>Contact Form</h2>
-                <!-- <label for="subject">Subject</label>
-                <select id="subject">
-                    <option>Contact Form</option>
-                    <option>Feedback</option>
-                    <option>Support</option>
-                </select> -->
                 <div class="name-fields">
                     <div>
                         <label for="firstName">First Name</label>
@@ -131,11 +138,6 @@
                 <label for="message">Message</label>
                 <textarea id="message" placeholder="Your message here..."></textarea>
                 <div class="error-message">Message is required</div>
-                <!-- <div class="radio-group">
-                    <span>Do you want to receive email notifications, news and special offers from us?</span><br>
-                    <input type="radio" name="subscribe" value="yes" checked> Yes
-                    <input type="radio" name="subscribe" value="no"> No
-                </div> -->
                 <button type="submit">SUBMIT FORM</button>
             </form>
         </div>
@@ -206,6 +208,10 @@
                 <p><a href="tel:3104082432">(310) 408-2432</a></p>
             </div>
             <div class="footer-images">
+                <div class="system-login">
+                    <p>Are you a System Admin? </p>
+                    <button class="login-btn" id="System-login">LOGIN</button>
+                </div>
                 <img src="Images/House.jpg" alt="house">
                 <img src="Images/Face.png" alt="face">
             </div>
@@ -214,5 +220,6 @@
     <div class="black-footer">
         <p><a href="https://it49.com">PROPERTY MANAGEMENT WEB DESIGN BY IT49 MULTIMEDIA</a></p>
     </div>
+    <script src="script.js"></script>
 </body>
 </html>

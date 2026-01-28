@@ -7,6 +7,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="Fontawesome/css/all.min.css">
     <title>Santorini Property Management</title>
+    <link rel="icon" type="image/x-icon" href="Images/Logo.png">
 </head>
 <body>
     <header class="site-top">
@@ -18,6 +19,7 @@
                     <p>PROPERTY MANAGEMENT</p>
                 </div>
             </div>
+            <button class="hamburger" id="hamburger"><i class="fa-solid fa-bars"></i></button>
             <div class="location">
                 <p>Beach Cities Office</p>
                 <p><a href="https://www.google.com/maps/place/727+2nd+St+UNIT+206,+Hermosa+Beach,+CA+90254,+USA/@33.8567369,-118.3936291,17z/data=!3m1!4b1!4m5!3m4!1s0x80c2b49d355abf07:0x8f187a49f6aff04b!8m2!3d33.8567325!4d-118.3914404">727 2nd Street, Unit 206 Hermosa Beach, CA 90254</a></p>
@@ -31,6 +33,16 @@
         </div>
         <hr class="header-hr">
     </header>
+    <aside class="sidebar" id="sidebar">
+        <button class="close-sidebar" id="closeSidebar"><i class="fa-solid fa-xmark"></i></button>
+        <nav>
+            <a href="Home.html">HOME</a>
+            <a href="Property.html">PROPERTIES</a>
+            <a href="Tenants.html">TENANTS</a>
+            <a href="Owners.html">OWNERS</a>
+            <a href="Contact.html">CONTACT</a>
+        </nav>
+    </aside>
     <div class="links">
         <nav>
             <a href="Home.html">HOME</a>
@@ -49,6 +61,7 @@
             <p>Tenants Services</p>
             <hr class="middle-hr">
             <p>At Santorini Property Management, we provide exceptional tenant services to ensure our tenants' comfort and satisfaction. We strive to ensure all of our tenants have a pleasant rental experience by addressing concerns promptly, responding quickly to requests, and ensuring that each tenant feels secure and comfortable living in their residence. Our goal is to create a stress-free and enjoyable living experience.</p>
+            <button class="middle-btn" id="Teant-login">LOGIN - TENANT</button>
             <div class="display-T-place">
                 <div class="display-T">
                     <img src="Images/Application.webp" alt="Application">
@@ -105,7 +118,7 @@
                 </div>
             </div>
             <div class="footer-links">
-                <a href="Home.html">HOME</a> | <a href="Property.html">PROPERTY</a> | <a href="Tenants.html">TENANTS</a> | <a href="Owners.html">OWNERS</a> | <a href="Contact.html">CONTACT</a>
+                <a href="Home.html">HOME</a> | <a href="Property.html">PROPERTY</a> | <a href="Tenants.html">TENANTS</a> | <a href="Owners.html">OWNERS</a> | <a href="Contact.html">CONTACT</a> 
             </div>
             </div>
             <hr class="header-hr">
@@ -122,6 +135,10 @@
                 <p><a href="tel:3104082432">(310) 408-2432</a></p>
             </div>
             <div class="footer-images">
+                <div class="system-login">
+                    <p>Are you a System Admin? </p>
+                    <button class="login-btn" id="System-login">LOGIN</button>
+                </div>
                 <img src="Images/House.jpg" alt="house">
                 <img src="Images/Face.png" alt="face">
             </div>
@@ -130,5 +147,6 @@
     <div class="black-footer">
         <p><a href="https://it49.com">PROPERTY MANAGEMENT WEB DESIGN BY IT49 MULTIMEDIA</a></p>
     </div>
+        <script src="script.js"></script>
 </body>
 </html>

@@ -1,3 +1,6 @@
+/* small-screen defaults (moved to bottom to override when needed) */
+/* placeholder — moved to end of file */
+
 *{
     margin: 0%;
     padding: 0%;
@@ -469,6 +472,94 @@ body{
     color: #757575;
     text-align: center;
 }
+/**/
+.modal{
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.6);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+.modal.active{
+    display: flex;
+}
+.modal-content{
+    background: white;
+    padding: 30px 40px;
+    width: 400px;
+    max-width: 90%;
+    border-radius: 10px;
+    position: relative;
+}
+.close{
+    position: absolute;
+    top: 12px;
+    right: 15px;
+    font-size: 24px;
+    cursor: pointer;
+}
+.modal-contact-form{
+    display: flex;
+    flex-direction: column;
+}
+.modal-contact-form input,
+.modal-contact-form textarea{
+    margin-bottom: 15px;
+    padding: 10px;
+}
+.modal-contact-form button{
+    background-color: #0f50a6;
+    color: white;
+    border: none;
+    padding: 12px;
+    cursor: pointer;
+}
+.modal-contact-form h2 {
+    text-align: center;
+    color: #505050;
+    margin-bottom: 25px;
+    font-weight: 400;
+}
+.modal-contact-form label {
+    display: block;
+    margin-bottom: 5px;
+    color: #505050;
+    font-weight: 500;
+    font-size: 14px;
+}
+.modal-contact-form input[type="text"],
+.modal-contact-form input[type="email"],
+.modal-contact-form input[type="tel"],
+.modal-contact-form select,
+.modal-contact-form textarea {
+    width: 100%;
+    padding: 10px 12px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+.modal-contact-form textarea {
+    height: 100px;
+    resize: none;
+}
+.modal-contact-form button {
+    width: 100%;
+    padding: 12px;
+    background-color: #1a5ed6;
+    color: #fff;
+    border: none;
+    border-radius: 25px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.modal-contact-form button:hover {
+    background-color: #0f4bbd;
+}
 /* ------ OWNERS SECION - ENDS --------*/ 
 
 /* ------ CONTACT SECION - BEGINS --------*/
@@ -754,6 +845,32 @@ body{
     padding: 30px 180px 30px;
     width: 100%;
 }
+.system-login{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.system-login>p{
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 14px;
+    color: #0f4bbd;
+}
+.login-btn{
+    background-color: #0f4fa4;
+    color: white;
+    border-radius: 10px;
+    border: none;
+    font-size: 12px;
+    padding: 7px 10px;
+    margin: 0 0 0 5px;
+    cursor: pointer;
+    transition: ease-in-out 0.3s;
+}
+.login-btn:hover{
+    background-color: #61b5d3;
+}
 .footer-images img{
     height: 50px;
     width: auto;
@@ -770,5 +887,103 @@ body{
     text-decoration: none;
     color: white;
     text-align: center;
+}
+
+.hamburger{
+    background: none;
+    border: none;
+    font-size: 22px;
+    color: #0f50a6;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px;
+    margin-left: 12px;
+}
+.sidebar{
+    position: fixed;
+    left: -300px;
+    top: 0;
+    width: 280px;
+    height: 100%;
+    background: #fff;
+    box-shadow: 2px 0 8px rgba(0,0,0,0.08);
+    transition: left .28s ease;
+    z-index: 2000;
+    padding: 20px 18px;
+    overflow-y: auto;
+}
+.sidebar.active{
+    left: 0;
+}
+.sidebar .close-sidebar{
+    background: none;
+    border: none;
+    font-size: 20px;
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    color: #333;
+}
+.sidebar nav{
+    margin-top: 48px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.sidebar nav a{
+    color: #0f50a6;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(15,80,166,0.06);
+}
+
+.links{
+    display: none !important;
+}
+.top{
+    padding: 16px 18px;align-items: center;
+}
+.title-container{
+    width: auto;
+}
+.location{
+    display: none;
+}
+img{
+    max-width:100%;height: auto;
+}
+
+/* Tablet */
+@media (min-width: 600px){
+    .links{
+        display: flex !important;
+        margin: 0 100px;
+        justify-content: space-between;
+    }
+    .hamburger{
+        display: none;
+    }
+    .sidebar{
+        display: none;
+    }
+    .top{
+        padding: 24px 60px;
+    }
+    .location{
+        display: block
+    }
+}
+@media (min-width: 992px){
+    .links{
+        margin: 0 300px !important;
+    }
+    .top{
+        padding: 30px 180px 15px
+    }
+    .header-hr{
+        width: 78%
+    }
 }
 
