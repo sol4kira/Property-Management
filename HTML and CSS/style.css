@@ -3,12 +3,10 @@
     padding: 0%;
     box-sizing: border-box;
 }
-
 body{
     font-family: 'Open Sans', sans-serif;
     line-height: 1.6;
 }
-
 /* HEADER - BEGINS */ 
 .top {
     display: flex;
@@ -17,27 +15,22 @@ body{
     padding: 30px 180px 15px;
     width: 100%;
 }
-
 .title-container {
     display: flex;
     align-items: center;
     width: 94%;
 }
-
 #title-img {
     height: 70px;
     width: auto;
 }
-
 .para {
     margin-left: 12px;
 }
-
 .para p {
     margin: 0;
     padding: 0;
 }
-
 .para p:nth-child(1) {
     font-size: 30px;
     letter-spacing: 6px;
@@ -45,7 +38,6 @@ body{
     color: #1a2122;
     line-height: 1.1;
 }
-
 .para p:nth-child(2) {
     font-size: 11px;
     letter-spacing: 4px;
@@ -53,38 +45,32 @@ body{
     font-weight: 600;
     line-height: 1.1;
 }
-
 .location {
     text-align: right;
     font-size: 14px;
     color: #757575;
 }
-
 .location p:first-child {
     font-weight: 700;
     text-transform: uppercase;
     font-size: 14px;
     color: #6b6b6b;
 }
-
 .location p:last-child a {
     font-size: 18px;
     font-weight: bold;
     color: #6b6b6b;
 }
-
 .top a {
     color: #757575;
     text-decoration: none;
 }
-
 .top a:hover {
     text-decoration: underline;
 }
 .top a.active{
     text-decoration: underline;
 }
-
 .header-hr{
     width: 78%;
     margin: 20px auto 0;
@@ -101,7 +87,6 @@ body{
     display: flex;
     justify-content: space-between;
 }
-
 .links a{
     display: inline-block;
     color: #0f50a6;
@@ -111,7 +96,6 @@ body{
     font-size: 22px;
     border-bottom: solid 5px transparent;
 }
-
 .links a:hover,
 .links a.active{
     border-bottom-color: #0f50a6;
@@ -119,12 +103,9 @@ body{
 /* LINKS - ENDS */
 
 /* ------ HOME SECION - BEGINS --------*/
-
-/* HERO - BEGINS */
 .hero {
     position: relative;
 }
-
 .top-hero {
     background-image: url(/Images/Background.webp);
     background-size: cover;
@@ -133,7 +114,6 @@ body{
     width: 100%;
     position: relative;
 }
-
 .overview {
     position: absolute;
     bottom: 30px;
@@ -145,7 +125,6 @@ body{
     padding: 20px 25px;
     background: rgba(246, 250, 252, 0.9);
 }
-
 .overview p {
     margin: 0;
     text-transform: uppercase;
@@ -155,7 +134,6 @@ body{
     font-size: 1.0625rem;
     white-space: nowrap;
 }
-
 .inside-link {
     display: flex;
     align-items: center;
@@ -169,15 +147,12 @@ body{
     color: #6b6b6b;
     cursor: pointer;
 }
-
 .inside-link i {
     color: #0f50a6;
 }
-
 .inside-link:hover {
     border-color: #0f50a6;
 }
-
 /**/
 .middle-hero{
     padding: 0 .75rem;
@@ -220,9 +195,7 @@ body{
 .middle-btn:hover{
     background-color: #61b5d3;
 }
-
 /**/
-
 .display-place{
     width: auto;
     display: flex;
@@ -230,29 +203,24 @@ body{
     padding-bottom: 0;
     padding-top: 0;
 }
-
 .display-place p:nth-of-type(1){
     color:#757575;
     font-size: 2rem;
 }
-
 .display-place img{
     height: 310px;
     width: auto;
 }
-
 .display-first,.display-second,.display-third{
     padding-bottom: 0;
     padding-top: 0;
 }
-
 .display-second{
     border-right: solid 1px #61b5d3;
     border-left: solid 1px #61b5d3;
     padding: 0 25px;
     margin: 0 25px;
 }
-
 .view{
     background-color: white;
     color: #0f50a6;
@@ -267,13 +235,9 @@ body{
 .view:hover{
     background-color: #ebf0f2;
 }
-/* HERO - ENDS */
-
 /* ------ HOME SECION - ENDS --------*/
 
 /* ------ PROPERTY SECION - BEGINS --------*/
-
-/* HERO - BEGINS */
 .filters{
     display: flex;
     justify-content: center;
@@ -291,41 +255,33 @@ body{
     font-size: 1.0625rem;
     white-space: nowrap;
 }
-
 .display-houses{
     margin: 0 200px;
 }
-
 .featured{
     display: flex;
     justify-content: space-between;
 }
-
 .featured i, #number{
     color: #0f50a6;
 }
-
 .featured p{
     color: #757575;
     font-size: 16px;
     padding: 10px 0;
 }
-
 .sorting{
     display: flex;
     align-items: center;
     gap: 10px;
 }
-
 .sorting label{
     color: #757575;
     font-size: 16px;
 }
-
 .select-wrapper{
     position: relative;
 }
-
 .select-wrapper select{
     appearance: none;
     padding: 10px 10px 10px 14px;
@@ -337,13 +293,11 @@ body{
     cursor: pointer;
     transition: border 0.3s ease;
 }
-
 .select-wrapper select:hover,
 .select-wrapper select:focus{
     border-color: #0f50a6;
     outline: none;
 }
-
 .select-wrapper i{
     position: absolute;
     right: 12px;
@@ -353,7 +307,6 @@ body{
     pointer-events: none;
     font-size: 14px;
 }
-
 .houses{
     width: 100%;
     display: grid;
@@ -362,20 +315,17 @@ body{
     justify-content: center;
     margin: 5px 0 30px;
 }
-
 .item{
     display: flex;
     flex-direction: column;
     height: 100%;
 }
-
 .item img{
     width: 100%;
     height: 320px;
     object-fit: cover; 
     display: block;
 }
-
 .info{
     text-align: center;
     background-color: #f1f1f1;
@@ -383,37 +333,30 @@ body{
     display: flex;
     flex-direction: column;
 }
-
 .info p{
     padding: 12px 10px;
     margin: 0;
 }
-
 .info p:nth-of-type(1){
     color: #0f50a6;
     font-weight: bold;
     padding: 10px 45px 5px;
 }
-
 .info p:nth-of-type(2),
 .info p:nth-of-type(3){
     border-top: 0.5px solid #61b5d3;
 }
-
 .info p:nth-of-type(3){
     border-bottom: 0.5px solid #61b5d3;
 }
-
 .info p:nth-of-type(4){
     margin-top: auto; /* pushes status to bottom */
     color: green;
     font-weight: bold;
 }
-/* HERO - ENDS */
-
 /* ------ PROPERTY SECION - ENDS --------*/
 
-/* ------ TENANT SECION - BEGINS --------*/
+/* ------ TENANTS SECION - BEGINS --------*/
 .cover-img img{
     max-width: 100%;
 }
@@ -437,7 +380,6 @@ body{
     height: 4px;
     background-color: #0f50a6;
 }
-
 .middle-T-hero p:nth-of-type(2){
     color:#757575;
     font-size: 1.1875rem;
@@ -445,13 +387,11 @@ body{
     margin: 0 0 1.8rem;
     justify-content: center;
 }
-
 .display-T-place{
     display: flex;
     justify-content: center;
     gap: 30px;
 }
-
 .display-T img{
     border: 3px solid #0f50a6;
     height: 250px;
@@ -459,22 +399,78 @@ body{
     margin: 0;
     padding: 0;
 }
-
 .display-T p:last-child{
     padding: 0px;
     font-size: 25px;
     color: #757575;
 }
+/* ------ TENANTS SECION - ENDS --------*/   
 
-/* ------ TENANT SECION - ENDS --------*/   
+/* ------ OWNERS SECION - BEGINS --------*/
+.middle-O-hero{
+    padding: 0 .75rem;
+    margin: 50px 200px;
+    text-align: center;
+    line-height: 1.8;
+}
+.middle-O-hero p:nth-of-type(1),
+.middle-O-hero p:nth-of-type(3){
+    font-family: 'Montserrat', sans-serif;
+    color: #0f50a6;
+    font-size: 34px;
+    margin: 20px 0;
+    font-weight: 100;
+}
+.middle-hr-two{
+    width: 15%;
+    margin: 20px auto 20px;
+    border: none;
+    height: 4px;
+    background-color: #757575;
+    opacity: 40%;
+}
+.middle-O-hero p:nth-of-type(2),
+.middle-O-hero p:nth-of-type(4){
+    color:#757575;
+    font-size: 1.1875rem;
+    line-height: 2.1;
+    margin: 0 0 1.8rem;
+    justify-content: center;
+}
+.menu-items{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.O-item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff;
+}
+.O-item img{
+    border: 3px solid #0f50a6;
+    width: 100%;
+    height: 160px;
+    object-fit: cover; 
+    display: block;
+}
+.O-item p:nth-of-type(1){
+    margin: 15px 0;
+    font-size: 18px;
+    color: #757575;
+    text-align: center;
+}
+
+/* ------ OWNERS SECION - ENDS --------*/   
 
 /* FOOTER - BEGINS */
-
 .bottom-hero{
     display: flex;
     width: 100%;
 }
-
 .right-display,
 .left-display{
     width: 50%;
@@ -485,42 +481,35 @@ body{
     padding: 60px;
     box-sizing: border-box;
 }
-
 .right-display{
     background-image: url(Images/Outside.jpg);
     background-size: cover;
     background-position: center;
 }
-
 .left-display{
     background-image: url(Images/Living\ room.jpg);
     background-size: cover;
     background-position: center;
 }
-
 .right-cover,
 .left-cover{
     position: absolute;
     inset: 0;
     z-index: 1;
 }
-
 .right-cover{
     background-color: white;
     opacity: 0.95;
 }
-
 .left-cover{
     background-color: #0f50a6;
     opacity: 0.9;
 }
-
 .content,
 .img{
     position: relative;
     z-index: 2;
 }
-
 .img img{
     width: 220px;
     height: 220px;
@@ -528,24 +517,20 @@ body{
     object-fit: cover;
     margin-right: 40px;
 }
-
 .content p{
     font-size: 30px;
     font-family: 'Montserrat', sans-serif;
     margin-bottom: 20px;
 }
-
 .left-display .content p{
     color: white;
 }
-
 .service-list{
     display: flex;
     flex-direction: column;
     gap: 16px;
     margin-bottom: 30px;
 }
-
 .service-list a{
     text-decoration: none;
     font-size: 18px;
@@ -555,20 +540,16 @@ body{
     gap: 12px;
     transition: transform 0.3s ease, color 0.3s ease;
 }
-
 .service-list a i{
     color: #0f50a6;
     transition: transform 0.3s ease;
 }
-
 .left-display .service-list a{
     color: white;
 }
-
 .left-display .service-list a i{
     color: white;
 }
-
 .view-services{
     padding: 14px 28px;
     border-radius: 30px;
@@ -576,7 +557,6 @@ body{
     font-size: 14px;
     cursor: pointer;
 }
-
 .right-display .view-services{
     background-color: #0f50a6;
     color: white;
@@ -584,7 +564,6 @@ body{
 .right-display .view-services:hover{
     background-color: #61b5d3;
 }
-
 .left-display .view-services{
     background-color: white;
     color: #0f50a6;
@@ -592,18 +571,16 @@ body{
 .left-display .view-services:hover{
     background-color: #ebf0f2;
 }
-
+/**/
 .footer-one .title-container {
     display: flex;
     align-items: center;
     width: auto;
 }
-
 .footer-one a{
     color: #0f50a6;
     text-decoration: none;
 }
-
 .footer-locations{
     display: flex;
     justify-content: space-between;
@@ -611,7 +588,6 @@ body{
     padding: 30px 180px 30px;
     width: 100%;
 }
-
 .footer-images img{
     height: 50px;
     width: auto;
