@@ -13,7 +13,7 @@ app.use(cors());
 // send all requests to route.js
 app.use('/approved', approvedRoute);
 app.use('/applications',approvedRoute);
-app.use('maintenance',maintenanceRoute)
+app.use('/maintenance',maintenanceRoute)
 app.use('/tenant',saveDataRoute);
 app.use('/property',saveDataRoute);
 app.use('/propertyOwner',saveDataRoute);

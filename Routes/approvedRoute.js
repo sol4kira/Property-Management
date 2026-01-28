@@ -1,7 +1,7 @@
 const express = require('express');
 const route = express.Router();
 
-const {tenantApprovedEmail,tenantApplicationEmail}= require('../Email/tenateEmail.js');
+const {tenantApprovedEmail,tenantApplicationEmail}= require('../Email/tenantEmail.js');
 const {propertyOwnerTenantApprovedEmail}= require ('../Email/propertyOwnerEmail.js');
 
 //application email route
