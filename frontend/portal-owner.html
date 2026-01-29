@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Owner Dashboard - Santorini PM</title>
+    <link rel="stylesheet" href="portal.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <aside class="portal-sidebar">
+        <h2>Santorini</h2>
+        <nav class="portal-nav">
+            <a href="#overview" class="active"><i class="fa-solid fa-chart-line"></i> Overview</a>
+            <a href="#properties"><i class="fa-solid fa-city"></i> My Properties</a>
+            <a href="#finances"><i class="fa-solid fa-file-invoice-dollar"></i> Financial Reports</a>
+            <a href="#maintenance"><i class="fa-solid fa-screwdriver-wrench"></i> Maintenance Costs</a>
+            <a href="Home.html" id="logout"><i class="fa-solid fa-sign-out"></i> Logout</a>
+        </nav>
+    </aside>
+
+    <main class="portal-main">
+        <!-- Section 1: Overview -->
+        <section id="overview">
+            <h2 class="section-title">Performance Overview</h2>
+            <div class="card-grid">
+                <div class="card">
+                    <h3>Total Properties</h3>
+                    <p class="stat-number" id="totalProps">0</p>
+                </div>
+                <div class="card">
+                    <h3>Total Rent (MTD)</h3>
+                    <p class="stat-number" id="totalRent">$0</p>
+                </div>
+                <div class="card">
+                    <h3>Vacancy Rate</h3>
+                    <p class="stat-number" id="vacancyRate">0%</p>
+                </div>
+                <div class="card">
+                    <h3>Notifications</h3>
+                    <div id="ownerNotifs" class="notif-box"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 2: Property Drilldown -->
+        <section id="properties">
+            <h2 class="section-title">Property Drilldown</h2>
+            <div id="propertyList">
+                <!-- JS will inject tables here per property -->
+            </div>
+        </section>
+
+        <!-- Section 3: Financials -->
+        <section id="finances">
+            <h2 class="section-title">Financial Reporting</h2>
+            <div class="card">
+                <div style="display:flex; justify-content: space-between; align-items: center;">
+                    <h3>Monthly Collection Chart</h3>
+                    <button class="btn btn-coral" id="downloadCSV">Download CSV Report</button>
+                </div>
+                <div class="chart-container" id="financeChart" style="height: 200px; margin-top:20px;">
+                    <!-- CSS Bars injected here -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 4: Maintenance -->
+        <section id="maintenance">
+            <h2 class="section-title">Maintenance & Approvals</h2>
+            <div class="card">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Unit</th>
+                            <th>Issue</th>
+                            <th>Cost Est.</th>
+                            <th>Status</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="maintTableBody"></tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <script src="portal-owner.js"></script>
+</body>
+</html>

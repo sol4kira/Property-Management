@@ -54,60 +54,44 @@
     </div>
 
     <section class="hero">
-        <div class="cover-img">
-            <img src="Images/Guitar-bg.webp" alt="Guitar-bg">
-        </div>
+        <!-- belail - Changed from a div with an img tag to a dedicated background div for the zoom effect -->
+        <div class="T-hero-banner"></div>
+        
         <div class="T-hero">
             <p>Tenants Services</p>
             <hr class="middle-hr">
             <p>At Santorini Property Management, we provide exceptional tenant services to ensure our tenants' comfort and satisfaction. We strive to ensure all of our tenants have a pleasant rental experience by addressing concerns promptly, responding quickly to requests, and ensuring that each tenant feels secure and comfortable living in their residence. Our goal is to create a stress-free and enjoyable living experience.</p>
             <button class="middle-btn" id="Teant-login"><a href="Login.html">LOGIN - TENANT</a></button>
-            <button class="middle-btn" id="Add">Maintenance Form</button>
-        </div>
-        <div class="modal" id="formModal">
-            <div class="modal-content">
-                <span class="close">
-                    <i class="fa-solid fa-xmark"></i>
-                </span>
-                <form class="modal-contact-form">
-                    <h2>Maintenance Form</h2>
-
-                    <label for="firstName">Full Name</label>
-                    <input type="text" id="firstName" name="firstName">
-
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email">
-
-                    <label for="message">Message</label>
-                    <textarea id="message" name="message"></textarea>
-
-                    <button type="submit">SUBMIT FORM</button>
-                </form>
-            </div>
+            <div class="display-T-place">
+                <div class="display-T">
+                    <img src="Images/Application.webp" alt="Application">
+                    <p>Application Form</p>
+                </div>
+                <div class="display-T">
+                    <img src="Images/Maintenance.webp" alt="Maintenance">
+                    <p>Maintenance Form</p>
+                </div>
+            </div> 
         </div>
     </section>
     
     <footer>
         <div class="bottom-hero">
             <div class="right-display">
-                <div class="img">
-                    <img src="Images/Phone.webp" alt="phone">
-                </div>
+                <div class="img"><img src="Images/Phone.webp" alt="phone"></div>
                 <div class="right-cover"></div>
                 <div class="content">
                     <p>Property Management Services</p>
                     <div class="service-list">
-                        <a href="Property.html"><i class="fa-solid fa-angle-right"></i>Tenant Screening</a>
-                        <a href="Property.html"><i class="fa-solid fa-angle-right"></i>Maintenance And Repairs</a>
-                        <a href="Property.html"><i class="fa-solid fa-angle-right"></i>Rent collection</a>
+                        <a href="Owners.html"><i class="fa-solid fa-angle-right"></i>Tenant Screening</a>
+                        <a href="Owners.html"><i class="fa-solid fa-angle-right"></i>Maintenance And Repairs</a>
+                        <a href="Owners.html"><i class="fa-solid fa-angle-right"></i>Rent collection</a>
                     </div>
-                    <button class="view-services"><a href="Property.html">VIEW MORE SERVICES</a></button>
+                    <a href="Owners.html" class="view-services">VIEW MORE SERVICES</a>
                 </div>
             </div>
             <div class="left-display">
-                <div class="img">
-                    <img src="Images/Couch.webp" alt="couch">
-                </div>
+                <div class="img"><img src="Images/Couch.webp" alt="couch"></div>
                 <div class="left-cover"></div>
                 <div class="content">
                     <p>Tenant Services</p>
@@ -116,10 +100,11 @@
                         <a href="Tenants.html"><i class="fa-solid fa-angle-right"></i>Maintenance Request</a>
                         <a href="Tenants.html"><i class="fa-solid fa-angle-right"></i>Pay Rent Online</a>
                     </div>
-                    <button class="view-services"><a href="Property.html">VIEW MORE SERVICES</a></button>
+                    <a href="Tenants.html" class="view-services">VIEW MORE SERVICES</a>
                 </div>
             </div>
         </div>
+        <!-- ... rest of footer stays the same ... -->
         <div class="footer-one">
             <div class="top">
                 <div class= "title-container">
@@ -158,8 +143,7 @@
     </footer>
     <div class="black-footer">
         <p><a href="https://it49.com">PROPERTY MANAGEMENT WEB DESIGN BY IT49 MULTIMEDIA</a></p>
-    </div> 
+    </div>
+        <script src="script.js"></script>
 </body>
-<script src="script.js"></script>
-<script src="modal.js"></script>
 </html>

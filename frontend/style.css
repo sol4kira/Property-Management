@@ -106,24 +106,50 @@ body{
 .hero {
     position: relative;
 }
+
 .top-hero {
-    background-image: url("Images/Background-bg.webp");
-    background-size: cover;
-    background-position: center;
     height: 500px;
     width: 100%;
     position: relative;
+    overflow: hidden; /* This acts like a window frame to hide the zoomed edges */
 }
+
+/* This new block handles the image movement separately */
+.top-hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("Images/Background-bg.webp");
+    background-size: cover;
+    background-position: center;
+    z-index: -1; 
+    animation: slowZoomOut 8s ease-out forwards;
+}
+
+/* This defines the zoom-out motion */
+@keyframes slowZoomOut {
+    from {
+        transform: scale(1.2); /* Start 20% zoomed in */
+    }
+    to {
+        transform: scale(1);   /* End at normal size */
+    }
+}
+/*belail*/
 .overview {
     position: absolute;
-    bottom: 30px;
-    left: 220px;
-    /* right: 50px;  */
+    bottom: 30px;             /* Keeps it at the same height from the bottom */
+    left: 50%;                /* Move to the middle */
+    transform: translateX(-50%); /* Pulls it back so the center of the box is at the center of the screen */
     display: flex;
     align-items: center;
     gap: 20px;
     padding: 20px 25px;
     background: rgba(246, 250, 252, 0.9);
+    width: max-content;       /* Ensures the box only grows as wide as the buttons inside */
 }
 .overview p {
     margin: 0;
@@ -211,9 +237,22 @@ body{
     color:#757575;
     font-size: 2rem;
 }
-.display-place img{
+/* Belail- poppy outty images
+ Middle Hero Images (South Bay, Santa Monica, LA) */
+.display-place img {
     height: 310px;
     width: auto;
+    /* We start them shrunken and invisible */
+    transform: scale(0.7); 
+    opacity: 0;
+    /* Transition defines how smooth the "pop" looks */
+    transition: transform 1s ease-out, opacity 1s ease-out;
+}
+
+/* This class will be added by JavaScript when you scroll to the image */
+.display-place img.appear {
+    transform: scale(1);
+    opacity: 1;
 }
 .display-first,.display-second,.display-third{
     padding-bottom: 0;
@@ -235,6 +274,8 @@ body{
     margin: 20px 10px;
     cursor: pointer;
     transition: ease-in-out 0.3s;
+    display: inline-block;
+    text-decoration: none;
 }
 .view:hover{
     background-color: #ebf0f2;
@@ -323,10 +364,23 @@ body{
     text-decoration: none;
     color: #333;
 }
-.item{
+/* belail - Individual house item styling */
+.item {
     display: flex;
     flex-direction: column;
     height: 100%;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition */
+}
+
+/* Hover effect: slight blue background and a tiny lift */
+.item:hover {
+    background-color: #e3f2fd; /* Light blue tint */
+    transform: translateY(-5px); /* Optional: makes it "pop" up slightly */
+}
+
+/* Ensure the info section also turns blue on hover */
+.item:hover .info {
+    background-color: #e3f2fd; 
 }
 .item img{
     width: 100%;
@@ -357,10 +411,22 @@ body{
 .info p:nth-of-type(3){
     border-bottom: 0.5px solid #61b5d3;
 }
-.info p:nth-of-type(4){
+/* belail -
+Styling for the bottom status paragraph in each house card */
+.info p:nth-of-type(4) {
     margin-top: auto; 
-    color: #b40404;
     font-weight: bold;
+    /* removed the hard-coded color from here */
+}
+
+/* Green text for available properties */
+.status-available {
+    color: #2e7d32; /* Forest Green */
+}
+
+/* Red text for rented properties */
+.status-rented {
+    color: #b40404; /* Dark Red */
 }
 
 
@@ -488,10 +554,35 @@ body{
 /* ------ INSIDEPROP SECION - ENDS --------*/
 
 /* ------ TENANTS SECION - BEGINS --------*/
-.cover-img img{
-    max-width: 100%;
-    object-fit: cover; 
-    display: block;
+
+/* belail --- New Tenants Hero Banner with Zoom --- */
+.T-hero-banner {
+    height: 450px;           /* Increased height for a more vertical look */
+    width: 100%;
+    position: relative;
+    overflow: hidden;        /* Window frame to hide zooming edges */
+}
+
+.T-hero-banner::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("Images/Guitar-bg.webp");
+    background-size: cover;
+    background-position: center;
+    /* Reuse the same zoom animation we made for the home page */
+    animation: slowZoomOut 8s ease-out forwards;
+}
+
+/* Adjusting the text section below the banner */
+.T-hero {
+    padding: 0 .75rem;
+    margin: 50px 200px;
+    text-align: center;
+    line-height: 1.8;
 }
 .T-hero{
     padding: 0 .75rem;
@@ -540,6 +631,35 @@ body{
 /* ------ TENANTS SECION - ENDS --------*/   
 
 /* ------ OWNERS SECION - BEGINS --------*/
+/* --- New Owners Hero Banner with Zoom --- */
+.O-hero-banner {
+    height: 480px;           /* Increased height as requested */
+    width: 100%;
+    position: relative;
+    overflow: hidden;        /* Keeps the zoom inside the container */
+}
+
+.O-hero-banner::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("Images/Owner-bg.webp");
+    background-size: cover;
+    background-position: center;
+    /* Uses the existing zoom animation */
+    animation: slowZoomOut 8s ease-out forwards;
+}
+
+/* Adjust the content area spacing */
+.O-hero {
+    padding: 0 .75rem;
+    margin: 60px 200px;      /* Slightly increased top margin for breathing room */
+    text-align: center;
+    line-height: 1.8;
+}
 .O-hero{
     padding: 0 .75rem;
     margin: 50px 200px;
@@ -691,6 +811,38 @@ body{
 /* ------ OWNERS SECION - ENDS --------*/ 
 
 /* ------ CONTACT SECION - BEGINS --------*/
+/* ---belail-- Keyframes for slow zoom-out animation (reused) */
+
+/* --- New Contact Hero Banner with Zoom --- */
+.C-hero-banner {
+    height: 480px;           /* Increased vertical height for better visual impact */
+    width: 100%;
+    position: relative;
+    overflow: hidden;        /* Window frame to contain the zoom */
+}
+
+.C-hero-banner::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("Images/Contact-bg.webp");
+    background-size: cover;
+    background-position: center;
+    /* Applies the zoom-out animation */
+    animation: slowZoomOut 8s ease-out forwards;
+}
+
+/* Spacing for the text area below the banner */
+.middle-C-hero {
+    padding: 0 .75rem;
+    margin: 60px 200px;
+    text-align: center;
+    line-height: 1.8;
+    font-family: 'Open Sans', sans-serif;
+}
 .C-hero{
     width: 100%;
 }
@@ -799,10 +951,12 @@ body{
     height: 100px;
     resize: none;
 }
+/* belail - Added error message styling */
 .error-message {
     color: #e53935;
     font-size: 12px;
     margin-bottom: 10px;
+    display: none; /* ADDED THIS LINE: It hides the message by default */
 }
 .contact-form .radio-group {
     margin: 10px 0 20px 0;
@@ -895,12 +1049,24 @@ body{
     position: relative;
     z-index: 2;
 }
-.img img{
+/* belail - poppy outty for bottom images
+Bottom Hero Images (Phone and Couch) */
+.img img {
     width: 220px;
     height: 220px;
     border-radius: 50%;
     object-fit: cover;
     margin-right: 40px;
+    /* Same starting state: shrunken and invisible */
+    transform: scale(0.7);
+    opacity: 0;
+    transition: transform 1.0s ease-out, opacity 1.0s ease-out;
+}
+
+/* This class will be added by JavaScript when you scroll to the image */
+.img img.appear {
+    transform: scale(1);
+    opacity: 1;
 }
 .content p{
     font-size: 30px;
@@ -935,13 +1101,18 @@ body{
 .left-display .service-list a i{
     color: white;
 }
-.view-services{
+.view-services {
     padding: 14px 28px;
     border-radius: 30px;
     border: none;
     font-size: 14px;
     cursor: pointer;
+    display: inline-block;    /* Keeps the button shape */
+    text-decoration: none;    /* Removes the underline */
+    text-align: center;       /* ADDED: Centers text if the button grows */
+    transition: all 0.3s ease; /* ADDED: Makes the hover color change smooth */
 }
+
 .view-services a{
     color: white;
     text-decoration: none;

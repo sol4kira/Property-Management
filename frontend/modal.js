@@ -1,21 +1,46 @@
-(() => {
+window.addEventListener("DOMContentLoaded", () => {
     const openBtn = document.getElementById("Add");
     const modal = document.getElementById("formModal");
-    const closeBtn = modal.querySelector(".close");
+    const closeBtn = document.querySelector(".close");
+    const appForm = document.querySelector(".modal-contact-form");
 
-    if (!openBtn || !modal || !closeBtn) return;
+    // 1. Open/Close Logic
+    if (openBtn && modal) {
+        openBtn.addEventListener("click", () => modal.classList.add("active"));
+    }
+    if (closeBtn && modal) {
+        closeBtn.addEventListener("click", () => modal.classList.remove("active"));
+    }
 
-    openBtn.addEventListener("click", () => {
-        modal.classList.add("active");
-    });
+    // 2. SUBMISSION LOGIC
+    if (appForm) {
+        appForm.addEventListener("submit", (e) => {
+            e.preventDefault();
 
-    closeBtn.addEventListener("click", () => {
-        modal.classList.remove("active");
-    });
+            // Get property name from the page (from the <h2> we gave an ID earlier)
+            const propertyRequested = document.getElementById("propAddress")?.innerText || "Unknown Property";
 
-    modal.addEventListener("click", (e) => {
-        if (e.target === modal) {
+            // Create the application object
+            const newApplication = {
+                id: "app" + Date.now(), // Unique ID
+                name: document.getElementById("firstName").value + " " + document.getElementById("lastName").value,
+                email: document.getElementById("email").value,
+                phone: document.getElementById("phone").value,
+                unit: propertyRequested,
+                status: "pending",
+                date: new Date().toLocaleDateString()
+            };
+
+            // GET existing apps from localStorage, PUSH new one, SAVE back
+            const existingApps = JSON.parse(localStorage.getItem('admin_apps')) || [];
+            existingApps.push(newApplication);
+            localStorage.setItem('admin_apps', JSON.stringify(existingApps));
+
+            // Success feedback
+            alert("Application Submitted Successfully! The Admin will review it shortly.");
+            
+            appForm.reset();
             modal.classList.remove("active");
-        }
-    });
-})();
+        });
+    }
+});
