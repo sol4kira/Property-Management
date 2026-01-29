@@ -64,6 +64,12 @@ function tenantApprovedEmail(application){
 
     <p>We congratulation for your new home.</p>
 
+    <P> You can access your portal using this login info:<p>
+    <ul>
+    <li><strong>Username:</strong>[simpleLogin]</li>
+    <li><strong>Password:</strong> your phone number [samplePassword]</li>
+    </ul>
+
     <h2>Next Steps</h2>
     <p>Now that your application have been approved, you are required to do this in order to finalize the deal and seal the agreement.</p>
     <ul type="disc">

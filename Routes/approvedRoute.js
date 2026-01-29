@@ -29,3 +29,5 @@ route.post('/approved',async(req,res)=>{
         res.status(500).send({message:'Failed to send approved email'});
     }
 })
+
+module.exports = route;

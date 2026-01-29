@@ -16,3 +16,5 @@ route.post('/maintenance',async (req,res)=>{
         res.status(500).send({message:'Failed to send Maintenance request email'});
     }
 })
+
+module.exports = route;

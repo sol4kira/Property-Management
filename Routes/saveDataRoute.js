@@ -122,3 +122,5 @@ res.status(500).send({ message: 'Failed to save property.' });
 }
 
 })
+
+module.exports = saveData;

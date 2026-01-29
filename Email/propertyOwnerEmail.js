@@ -50,7 +50,8 @@ function maintenanceRequestReceived(maintenanceRequest){
         tenantName,
         propertyAddress,
         requestDetails,
-        propertyOwner
+        propertyOwner,
+        propertyOwnerEmail
     } = maintenanceRequest;
 
     const emailContent = `
