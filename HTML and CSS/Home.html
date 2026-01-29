@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="Fontawesome/css/all.min.css">
+    <title>Santorini Property Management</title>
+    <link rel="icon" type="image/x-icon" href="Images/Logo.png">
+</head>
+<body>
+    <header class="site-top">
+        <div class="top">
+            <div class= "title-container">
+                <img src="Images/Logo.png" alt="logo" id="title-img">
+                <div class="para">
+                    <p>SANTORINI</p>
+                    <p>PROPERTY MANAGEMENT</p>
+                </div>
+            </div>
+            <button class="hamburger" id="hamburger"><i class="fa-solid fa-bars"></i></button>
+            <div class="location">
+                <p>Beach Cities Office</p>
+                <p><a href="https://www.google.com/maps/place/727+2nd+St+UNIT+206,+Hermosa+Beach,+CA+90254,+USA/@33.8567369,-118.3936291,17z/data=!3m1!4b1!4m5!3m4!1s0x80c2b49d355abf07:0x8f187a49f6aff04b!8m2!3d33.8567325!4d-118.3914404">727 2nd Street, Unit 206 Hermosa Beach, CA 90254</a></p>
+                <p><a href="tel:3109387649">(310) 938-7649</a></p>
+            </div>
+            <div class="location">
+                <p>Satellite Office</p>
+                <p><a href="https://www.google.com/maps/place/727+2nd+St+UNIT+206,+Hermosa+Beach,+CA+90254,+USA/@33.8567369,-118.3936291,17z/data=!3m1!4b1!4m5!3m4!1s0x80c2b49d355abf07:0x8f187a49f6aff04b!8m2!3d33.8567325!4d-118.3914404">4014 Marine Ave, Unit A Lawndale, CA 90260</a></p>
+                <p><a href="tel:3104082432">(310) 408-2432</a></p>
+            </div>
+        </div>
+        <hr class="header-hr">
+    </header>
+    <aside class="sidebar" id="sidebar">
+        <button class="close-sidebar" id="closeSidebar"><i class="fa-solid fa-xmark"></i></button>
+        <nav>
+            <a href="Home.html">HOME</a>
+            <a href="Property.html">PROPERTIES</a>
+            <a href="Tenants.html">TENANTS</a>
+            <a href="Owners.html">OWNERS</a>
+            <a href="Contact.html">CONTACT</a>
+        </nav>
+    </aside>
+    <div class="links">
+        <nav>
+            <a href="Home.html">HOME</a>
+            <a href="Property.html">PROPERTIES</a>
+            <a href="Tenants.html">TENANTS</a>
+            <a href="Owners.html">OWNERS</a>
+            <a href="Contact.html">CONTACT</a>
+        </nav>
+    </div>
+    <section class="hero">
+        <div class="top-hero">
+            <div class="overview">
+                <p>Available Apartments</p>
+                <!--Belail-->>
+                <!-- We use ?filter= in the URL so the next page knows what to show -->
+                <a href="Property.html?filter=Redondo" class="inside-link"><i class="fa-solid fa-bars"></i>Redondo Beach Apartments</a>
+                <a href="Property.html?filter=Gardena" class="inside-link"><i class="fa-solid fa-bars"></i>Gardena Apartments</a>
+                <a href="Property.html?filter=Lawndale" class="inside-link"><i class="fa-solid fa-bars"></i>Lawndale Apartments</a>
+            </div>
+        </div>
+        <div class="middle-hero">
+            <p>Santorini Property Management Services in South Bay</p>
+            <hr class="middle-hr">
+            <p>Santorini Property Management is a full service property management company based in Hermosa Beach of Los Angeles County. Serving the South Bay for over 20 years, we specialize in managing and leasing multi-family apartments, commercial properties and single-family homes exclusively in Hermosa Beach, Manhattan Beach, Torrance, Lawndale, Hawthorne and Gardena. Understanding the importance of fostering and strengthening relationships with our tenants and clients, we work hard to provide the highest quality of service in the industry.</p>
+            
+            <!-- FIXED: Anchor on the outside of the button to ensure it routes correctly -->
+            <a href="Login.html"><button class="middle-btn" id="Owner-login">LOGIN</button></a>
+
+            <div class="display-place">
+                <div class="display-first">
+                    <p>South Bay <br> Apartments</p>
+                    <img src="Images/South.webp" alt="South bay">
+                    <!-- Changed from button to 'a' tag per Belail's earlier update -->
+                    <a href="Property.html" class="view">VIEW PROPERTIES</a>
+                </div>
+                <div class="display-second">
+                    <p>Santa Monica <br> Apartments</p>
+                    <img src="Images/Santa.webp" alt="Santa Monica">
+                    <!-- Changed from button to 'a' tag per Belail's earlier update -->
+                    <a href="Property.html" class="view">VIEW PROPERTIES</a>
+                </div>
+                <div class="display-third">
+                    <p>Los Angeles <br> Apartments</p>
+                    <img src="Images/LA.webp" alt="LA">
+                    <!-- Changed from button to 'a' tag per Belail's earlier update -->
+                    <a href="Property.html" class="view">VIEW PROPERTIES</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <footer>
+        <!-- belail - BOTTOM HERO SECTION -->
+        <div class="bottom-hero">
+            <!-- PROPERTY MANAGEMENT SERVICES SECTION -->
+            <div class="right-display">
+                <div class="img">
+                    <img src="Images/Phone.webp" alt="phone">
+                </div>
+                <div class="right-cover"></div>
+                <div class="content">
+                    <p>Property Management Services</p>
+                    <div class="service-list">
+                        <!-- All point to Owners.html -->
+                        <a href="Owners.html"><i class="fa-solid fa-angle-right"></i>Tenant Screening</a>
+                        <a href="Owners.html"><i class="fa-solid fa-angle-right"></i>Maintenance And Repairs</a>
+                        <a href="Owners.html"><i class="fa-solid fa-angle-right"></i>Rent collection</a>
+                    </div>
+                    <!-- Cleaned up: Just a link styled as a button pointing to Owners.html -->
+                    <a href="Owners.html" class="view-services">VIEW MORE SERVICES</a>
+                </div>
+            </div>
+
+            <!-- TENANT SERVICES SECTION -->
+            <div class="left-display">
+                <div class="img">
+                    <img src="Images/Couch.webp" alt="couch">
+                </div>
+                <div class="left-cover"></div>
+                <div class="content">
+                    <p>Tenant Services</p>
+                    <div class="service-list">
+                        <!-- All point to Tenants.html -->
+                        <a href="Tenants.html"><i class="fa-solid fa-angle-right"></i>Find Property For Rent</a>
+                        <a href="Tenants.html"><i class="fa-solid fa-angle-right"></i>Maintenance Request</a>
+                        <a href="Tenants.html"><i class="fa-solid fa-angle-right"></i>Pay Rent Online</a>
+                    </div>
+                    <!-- Cleaned up: Just a link styled as a button pointing to Tenants.html -->
+                    <a href="Tenants.html" class="view-services">VIEW MORE SERVICES</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-one">
+            <div class="top">
+                <div class= "title-container">
+                    <img src="Images/Logo.png" alt="logo" id="title-img">
+                    <div class="para">
+                        <p>SANTORINI</p>
+                        <p>PROPERTY MANAGEMENT</p>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <a href="Home.html">HOME</a> | <a href="Property.html">PROPERTY</a> | <a href="Tenants.html">TENANTS</a> | <a href="Owners.html">OWNERS</a> | <a href="Contact.html">CONTACT</a>
+                </div>
+            </div>
+            <hr class="header-hr">
+        </div>
+        <div class="footer-locations">
+            <div class="location">
+                <p><i class="fa-solid fa-map-pin"></i>Beach Cities Office</p>
+                <p><a href="https://www.google.com/maps/place/727+2nd+St+UNIT+206,+Hermosa+Beach,+CA+90254,+USA/@33.8567369,-118.3936291,17z/data=!3m1!4b1!4m5!3m4!1s0x80c2b49d355abf07:0x8f187a49f6aff04b!8m2!3d33.8567325!4d-118.3914404">727 2nd Street, Unit 206 <br> Hermosa Beach, CA 90254</a></p>
+                <p><a href="tel:3109387649">(310) 938-7649</a></p>
+            </div>
+            <div class="location">
+                <p><i class="fa-solid fa-map-pin"></i>Satellite Office</p>
+                <p><a href="https://www.google.com/maps/place/727+2nd+St+UNIT+206,+Hermosa+Beach,+CA+90254,+USA/@33.8567369,-118.3936291,17z/data=!3m1!4b1!4m5!3m4!1s0x80c2b49d355abf07:0x8f187a49f6aff04b!8m2!3d33.8567325!4d-118.3914404">4014 Marine Ave, Unit A <br> Lawndale, CA 90260</a></p>
+                <p><a href="tel:3104082432">(310) 408-2432</a></p>
+            </div>
+            <div class="footer-images">
+                <div class="system-login">
+                    <p>Are you a System Admin? </p>
+                    <!-- FIXED: Anchor on the outside of the button -->
+                    <a href="Login.html"><button class="login-btn" id="System-login">LOGIN</button></a>
+                </div>
+                <img src="Images/House.jpg" alt="house">
+                <img src="Images/Face.png" alt="face">
+            </div>
+        </div>
+    </footer>
+    <div class="black-footer">
+        <p><a href="https://it49.com">PROPERTY MANAGEMENT WEB DESIGN BY B.B.K MULTIMEDIA</a></p>
+    </div>
+        <script src="script.js"></script>
+</body>
+</html>
