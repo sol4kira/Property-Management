@@ -52,29 +52,87 @@
             <a href="Contact.html">CONTACT</a>
         </nav>
     </div>
-
-    <section class="hero">
-        <div class="cover-img">
-            <img src="Images/Guitar-bg.webp" alt="Guitar-bg">
-        </div>
-        <div class="T-hero">
-            <p>Tenants Services</p>
-            <hr class="middle-hr">
-            <p>At Santorini Property Management, we provide exceptional tenant services to ensure our tenants' comfort and satisfaction. We strive to ensure all of our tenants have a pleasant rental experience by addressing concerns promptly, responding quickly to requests, and ensuring that each tenant feels secure and comfortable living in their residence. Our goal is to create a stress-free and enjoyable living experience.</p>
-            <button class="middle-btn" id="Teant-login">LOGIN - TENANT</button>
-            <div class="display-T-place">
-                <div class="display-T">
-                    <img src="Images/Application.webp" alt="Application">
-                    <p>Application Form</p>
-                </div>
-                <div class="display-T">
-                    <img src="Images/Maintenance.webp" alt="Maintenance">
-                    <p>Maintenance Form</p>
-                </div>
-            </div> 
-        </div>
-    </section>
     
+    <section class="I-hero">
+        <div class="image-display">
+            <div class="big-image">
+                <img src="Property-Images/Property-1.webp" alt="Property 1">
+            </div>
+            <div class="rest-image">
+                <div><i class="fas fa-spinner fa-spin"></i></div>
+                <div><i class="fas fa-spinner fa-spin"></i></div>
+                <div><i class="fas fa-spinner fa-spin"></i></div>
+                <div><i class="fas fa-spinner fa-spin"></i></div>
+            </div>
+        </div>
+        <div class="after-display">
+            <div class="description">
+                <div>
+                    <h2>14601 Firmona Ave <br> Lawndale, CA 90260</h2>
+                    <h2>FULLY RENTED</h2>
+                </div>
+                <hr>
+                <div>
+                    <h3>PETS:</h3>
+                    <p><i class="fa-solid fa-check"></i> Pet policy</p>
+                </div>
+                <hr>
+                <div>
+                    <h3>AMENITIES:</h3>
+                    <div class="special">
+                        <p><i class="fa-solid fa-check"></i> Garages & yards</p>
+                        <p><i class="fa-solid fa-check"></i> Laundary hookups </p>
+                        <p><i class="fa-solid fa-check"></i> Some units with balcony</p>
+                    </div>
+                </div>
+                <hr>
+                <div>
+                    <h3>UTILITIES:</h3>
+                    <p><i class="fa-solid fa-check"></i> Water/Trash</p>
+                </div>
+            </div>
+            <div class="showing">
+                <i class="fa-solid fa-house"></i>
+                <p>Eli Patronas</p>
+                <p><a href="eli@santorinipm.com">eli@santorinipm.com</a></p>
+                <p><a href="tel:3109387649">(310) 938-7649</a></p>
+                <button class="middle-btn" id="Add">Application Form</button>
+            </div>
+        </div>
+        <div class="view-office">
+            <p>Property On Map:</p>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3940.3698419664015!2d38.759452110412546!3d9.029986490993975!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x164b844b428bd1d9%3A0x2439574d6dcdd0e0!2sHiLCoE%20School%20of%20Computer%20Science%20and%20Technology!5e0!3m2!1sen!2set!4v1769615200817!5m2!1sen!2set" width="900" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <div class="modal" id="formModal">
+    <div class="modal-content">
+        <span class="close">
+            <i class="fa-solid fa-xmark"></i>
+        </span>
+        <form class="modal-contact-form">
+            <h2>Application Form</h2>
+
+            <label for="firstName">First Name</label>
+            <input type="text" id="firstName" name="firstName">
+
+            <label for="lastName">Last Name</label>
+            <input type="text" id="lastName" name="lastName">
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email">
+
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone">
+
+            <label for="message">Message</label>
+            <textarea id="message" name="message"></textarea>
+
+            <button type="submit">SUBMIT FORM</button>
+        </form>
+    </div>
+</div>
+
+    </section>
+
     <footer>
         <div class="bottom-hero">
             <div class="right-display">
@@ -118,7 +176,7 @@
                 </div>
             </div>
             <div class="footer-links">
-                <a href="Home.html">HOME</a> | <a href="Property.html">PROPERTY</a> | <a href="Tenants.html">TENANTS</a> | <a href="Owners.html">OWNERS</a> | <a href="Contact.html">CONTACT</a> 
+                <a href="Home.html">HOME</a> | <a href="Property.html">PROPERTY</a> | <a href="Tenants.html">TENANTS</a> | <a href="Owners.html">OWNERS</a> | <a href="Contact.html">CONTACT</a>
             </div>
             </div>
             <hr class="header-hr">
@@ -144,9 +202,6 @@
             </div>
         </div>
     </footer>
-    <div class="black-footer">
-        <p><a href="https://it49.com">PROPERTY MANAGEMENT WEB DESIGN BY IT49 MULTIMEDIA</a></p>
-    </div>
-        <script src="script.js"></script>
 </body>
+<script src="modal.js"></script>
 </html>
