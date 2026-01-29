@@ -1,17 +1,21 @@
-const openBtn = document.getElementById("Add");
-const modal = document.getElementById("formModal");
-const closeBtn = document.querySelector(".close");
+(() => {
+    const openBtn = document.getElementById("Add");
+    const modal = document.getElementById("formModal");
+    const closeBtn = modal.querySelector(".close");
 
-openBtn.addEventListener("click", () => {
-    modal.classList.add("active");
-});
+    if (!openBtn || !modal || !closeBtn) return;
 
-closeBtn.addEventListener("click", () => {
-    modal.classList.remove("active");
-});
+    openBtn.addEventListener("click", () => {
+        modal.classList.add("active");
+    });
 
-modal.addEventListener("click", (e) => {
-    if (e.target === modal) {
+    closeBtn.addEventListener("click", () => {
         modal.classList.remove("active");
-    }
-});
+    });
+
+    modal.addEventListener("click", (e) => {
+        if (e.target === modal) {
+            modal.classList.remove("active");
+        }
+    });
+})();

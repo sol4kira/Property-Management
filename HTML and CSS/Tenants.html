@@ -62,16 +62,28 @@
             <hr class="middle-hr">
             <p>At Santorini Property Management, we provide exceptional tenant services to ensure our tenants' comfort and satisfaction. We strive to ensure all of our tenants have a pleasant rental experience by addressing concerns promptly, responding quickly to requests, and ensuring that each tenant feels secure and comfortable living in their residence. Our goal is to create a stress-free and enjoyable living experience.</p>
             <button class="middle-btn" id="Teant-login"><a href="Login.html">LOGIN - TENANT</a></button>
-            <div class="display-T-place">
-                <div class="display-T">
-                    <img src="Images/Application.webp" alt="Application">
-                    <p>Application Form</p>
-                </div>
-                <div class="display-T">
-                    <img src="Images/Maintenance.webp" alt="Maintenance">
-                    <p>Maintenance Form</p>
-                </div>
-            </div> 
+            <button class="middle-btn" id="Add">Maintenance Form</button>
+        </div>
+        <div class="modal" id="formModal">
+            <div class="modal-content">
+                <span class="close">
+                    <i class="fa-solid fa-xmark"></i>
+                </span>
+                <form class="modal-contact-form">
+                    <h2>Maintenance Form</h2>
+
+                    <label for="firstName">Full Name</label>
+                    <input type="text" id="firstName" name="firstName">
+
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email">
+
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message"></textarea>
+
+                    <button type="submit">SUBMIT FORM</button>
+                </form>
+            </div>
         </div>
     </section>
     
@@ -146,7 +158,8 @@
     </footer>
     <div class="black-footer">
         <p><a href="https://it49.com">PROPERTY MANAGEMENT WEB DESIGN BY IT49 MULTIMEDIA</a></p>
-    </div>
-        <script src="script.js"></script>
+    </div> 
 </body>
+<script src="script.js"></script>
+<script src="modal.js"></script>
 </html>
