@@ -195,6 +195,10 @@ body{
 .middle-btn:hover{
     background-color: #61b5d3;
 }
+.middle-btn a{
+    text-decoration: none;
+    color: white;
+}
 /**/
 .display-place{
     width: auto;
@@ -317,6 +321,7 @@ body{
 }
 .houses a{
     text-decoration: none;
+    color: #333;
 }
 .item{
     display: flex;
@@ -937,6 +942,15 @@ body{
     font-size: 14px;
     cursor: pointer;
 }
+.view-services a{
+    color: white;
+    text-decoration: none;
+}
+.left-display .view-services a{
+    color: #0f4bbd;
+    text-decoration: none;
+}
+
 .right-display .view-services{
     background-color: #0f50a6;
     color: white;
@@ -990,6 +1004,10 @@ body{
     margin: 0 0 0 5px;
     cursor: pointer;
     transition: ease-in-out 0.3s;
+}
+.login-btn a{
+    text-decoration: none;
+    color: white;
 }
 .login-btn:hover{
     background-color: #61b5d3;
