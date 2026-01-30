@@ -32,6 +32,7 @@
     "dev": "nodemon server.js"
   },
   "dependencies": {
+    "@getbrevo/brevo": "^3.0.1",
     "cors": "^2.8.6",
     "express": "^5.2.1",
     "node_module": "^0.0.0",
