@@ -14,7 +14,7 @@ window.addEventListener("DOMContentLoaded", () => {
 
     // 2. SUBMISSION LOGIC
     if (appForm) {
-        appForm.addEventListener("submit", (e) => {
+        appForm.addEventListener("submit", async (e) => {
             e.preventDefault();
 
             // Get property name from the page (from the <h2> we gave an ID earlier)
@@ -22,14 +22,25 @@ window.addEventListener("DOMContentLoaded", () => {
 
             // Create the application object
             const newApplication = {
-                id: "app" + Date.now(), // Unique ID
+                //id: "app" + Date.now(), 
                 name: document.getElementById("firstName").value + " " + document.getElementById("lastName").value,
                 email: document.getElementById("email").value,
                 phone: document.getElementById("phone").value,
-                unit: propertyRequested,
-                status: "pending",
-                date: new Date().toLocaleDateString()
+                message: document.getElementById("message").value,
+                //date: new Date().toLocaleDateString()
             };
+            console.log("New Application:", newApplication);
+            const response = await fetch("https://property-management-9ilw.onrender.com/Routes/application/application", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(newApplication)
+            });
+
+            if (!response.ok) {
+            alert("Failed to submit application");
+            return;
+            }
+
 
             // GET existing apps from localStorage, PUSH new one, SAVE back
             const existingApps = JSON.parse(localStorage.getItem('admin_apps')) || [];

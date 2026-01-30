@@ -6,14 +6,22 @@ function tenantApplicationEmail(application){
     const {
         tenantName,
         tenantEmail,
-        propertyAddress
+        tenantPhoneNumber,
+        message
         } = application;
 
         const emailContent=`
         <h2> Application Recieved</h2>
         <p>Dear ${tenantName},</p>
 
-        <p> We have received the application you submitted for the property located at ${propertyAddress}.
+        <p> We have received the application you submitted.
+        details of your application:
+        <ul>
+        <li><strong>Application ID:</strong> ${id}</li>
+        <li><strong>Application Name:</strong> ${tenantName}</li>
+        <li><strong>Application Email:</strong> ${tenantEmail}</li>
+        <li><strong>Application Phone:</strong> ${tenantPhoneNumber}</li>
+        <li><strong>Application Message:</strong> ${message}</li>
         We will look at the application and get back to you as soon as possible.</p>
 
         <p> Thank you for choosing BBk Properties Management.</p>
@@ -35,12 +43,10 @@ function tenantApplicationEmail(application){
 }
 
 function tenantApprovedEmail(application){
-    const {propertyOwnerEmail,
-        propertyOwner,
+    const {
         tenantName,
-        tenantEmail,
-        tenantPhoneNumber,
-        propertyAddress
+        propertyAddress,
+        tenantEmail
         } = application;
 
     const emailContent=`
@@ -52,13 +58,10 @@ function tenantApprovedEmail(application){
     <ul>
     <li><strong>Name:</strong>${tenantName}</li>
     <li><strong>Email:</strong>${tenantEmail}</li>
-    <li><strong>Phone Number:</strong>${tenantPhoneNumber}</li>
     </ul>
     
     <p>Here is the information of the property you have been approved for:</p>
     <ul>
-    <li><strong>Property Owner:</strong>${propertyOwner}</li>
-    <li><strong>Property Owner Email:</strong>${propertyOwnerEmail}</li>
     <li><strong>Property Address:</strong>${propertyAddress}</li>
     </ul>
 
@@ -81,7 +84,6 @@ function tenantApprovedEmail(application){
     <p>We are excited to have you as a tenant and we believe you will have a great experience with us.</p>
     <br>
     <p>Fill free to contact us if there is any concerns.</p>
-    <a href="mailto:${propertyOwnerEmail}">Contact Property Owner</a>
     <br>
     <p> Thank you for choosing BBk Properties Management.</p>
     <br>

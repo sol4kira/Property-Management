@@ -6,10 +6,11 @@ const {propertyOwnerTenantApprovedEmail}= require ('../Email/propertyOwnerEmail.
 
 //application email route
 route.post('/application',async (req,res)=>{
+    console.log(req.body);
     const application = req.body;
-
-    try{
+        try{
         await tenantApplicationEmail(application);
+        console.log("Application received:", application);
         res.status(200).send({message:'Application email sent successfully'});
     }
     catch(err){
@@ -22,7 +23,8 @@ route.post('/approved',async(req,res)=>{
     const approved = req.body;
     
     try{
-        await  tenantApprovedEmail(approved);
+
+        await tenantApprovedEmail(approved);
         await propertyOwnerTenantApprovedEmail(approved);
         res.status(200).send({message:'Approved email sent successfully'});
     }catch(err){

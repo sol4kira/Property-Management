@@ -8,17 +8,18 @@ const saveDataRoute = require('./Routes/saveDataRoute');
 const app = express();
 
 app.use(express.json());
+app.use(express.urlencoded({ extended: true }))
 app.use(cors());
 
 // send all requests to route.js
-app.use('/approved', approvedRoute);
-app.use('/applications',approvedRoute);
-app.use('/maintenance',maintenanceRoute)
-app.use('/tenant',saveDataRoute);
-app.use('/property',saveDataRoute);
-app.use('/propertyOwner',saveDataRoute);
-app.use('/application',saveDataRoute);
-app.use('/maintenanceRequest',saveDataRoute);
+app.use('/Routes/approved', approvedRoute);
+app.use('/Routes/applications',approvedRoute);
+app.use('/Routes/maintenance',maintenanceRoute)
+app.use('/Routes/tenant',saveDataRoute);
+app.use('/Routes/property',saveDataRoute);
+app.use('/Routes/propertyOwner',saveDataRoute);
+app.use('/Routes/application',saveDataRoute);
+app.use('/Routes/maintenanceRequest',saveDataRoute);
 
 
 const PORT = process.env.PORT || 5000;
