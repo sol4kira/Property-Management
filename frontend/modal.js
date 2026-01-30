@@ -30,7 +30,7 @@ window.addEventListener("DOMContentLoaded", () => {
                 //date: new Date().toLocaleDateString()
             };
             console.log("New Application:", newApplication);
-            const response = await fetch("https://property-management-9ilw.onrender.com/Routes/application/application", {
+            const response = await fetch("https://property-management-1-z0ga.onrender.com/Routes/application/application", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(newApplication)
